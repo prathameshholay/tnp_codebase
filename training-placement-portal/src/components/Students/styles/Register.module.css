@@ -1,0 +1,91 @@
+/* Register.module.css */
+.container {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px;
+  background: var(--item-bg-color);
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  /* font-family is likely inherited from body, can be removed if so */
+}
+
+.heading {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.error {
+  color: var(--danger-color);
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 500;
+  /* Optional: subtle background for error
+  background-color: rgba(var(--danger-color-rgb, 220, 53, 69), 0.1);
+  padding: 0.5rem;
+  border-radius: 4px;
+  */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input {
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 1px solid var(--input-border-color);
+  background-color: var(--input-bg-color);
+  color: var(--input-text-color);
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+}
+
+.input:focus {
+  border-color: var(--input-focus-border-color);
+  box-shadow: 0 0 0 0.2rem var(--input-focus-box-shadow);
+  outline: none;
+}
+
+.button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: var(--primary-color);
+  color: var(--text-color-inverted);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Corrected transition property */
+}
+
+.button:hover {
+  background-color: var(--primary-color-hover);
+}
+
+.message {
+  text-align: center;
+  margin-top: 60px; /* This seems like a large margin, adjust if needed */
+  color: var(--text-color-light);
+  font-size: 18px;
+}
+
+.loginRedirect {
+  margin-top: 1rem;
+  background-color: transparent;
+  border: none;
+  color: var(--link-color);
+  cursor: pointer;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  padding: 0.5rem; /* Added padding for better clickability */
+  display: inline-block; /* For padding to take effect */
+  width: 100%; /* Make it full width for easier clicking */
+  text-align: center; /* Center the text */
+}
+
+.loginRedirect:hover {
+  color: var(--secondary-hover-color);
+}

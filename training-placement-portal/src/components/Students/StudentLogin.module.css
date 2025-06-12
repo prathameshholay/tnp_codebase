@@ -1,0 +1,96 @@
+/* StudentLogin.module.css */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* Allow register button to be below the form */
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 20px; /* Add some padding for smaller screens */
+  box-sizing: border-box;
+}
+
+.form {
+  padding: 30px;
+  background-color: var(--item-bg-color);
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  width: 100%; /* Allow it to be responsive */
+  max-width: 400px; /* Max width for larger screens */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px; /* Space between form and register button */
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.input {
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border: 1px solid var(--input-border-color);
+  background-color: var(--input-bg-color);
+  color: var(--input-text-color);
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--input-focus-border-color);
+  box-shadow: 0 0 0 0.2rem var(--input-focus-box-shadow);
+}
+
+.button {
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: var(--text-color-inverted);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--primary-color-hover);
+}
+
+.error {
+  color: var(--danger-color);
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+  /* Optional: subtle background for error
+  background-color: rgba(var(--danger-color-rgb, 220, 53, 69), 0.1);
+  padding: 0.5rem;
+  border-radius: 4px;
+  */
+}
+
+.registerButton {
+  padding: 10px 12px;
+  background-color: var(--secondary-color);
+  color: var(--text-color-inverted);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: normal; /* Lighter than primary button */
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Make it full width like the login button */
+  max-width: 400px; /* Match form max-width */
+  text-align: center;
+  text-decoration: none; /* In case it's an <a> tag styled as button */
+  display: inline-block; /* For proper sizing and margin */
+}
+
+.registerButton:hover {
+  background-color: var(--secondary-color-hover);
+}

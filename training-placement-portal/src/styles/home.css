@@ -1,0 +1,126 @@
+.home-page {
+  min-height: 100vh;
+  width: 100vw;
+  background: url('../assets/placement-bg.webp') no-repeat center center;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.social-icons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 15px;
+  font-size: 24px;
+}
+
+.social-icons a {
+  color: white;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #95daf3;
+}
+
+.navbar {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  display: flex;
+  gap: 30px;
+  font-size: 18px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffd700;
+}
+
+.home-page h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  color: white;
+  margin-top: 120px;
+  margin-bottom: 40px;
+  margin-left: 900px;
+  margin-right: 100px;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.7);
+  align-self: flex-end;
+}
+
+.card-container {
+  display: grid;
+  flex-direction: column;
+  grid-template-columns: repeat(2, 1fr);  /* 2 columns */
+  grid-template-rows: repeat(2, auto);    /* 2 rows */
+  gap: 30px;                               /* space between cards */
+  justify-content: end;                   /* align grid to the right */
+  padding: 40px;
+  margin-right: 80px;  
+  margin-top: 10px;                   /* adjust horizontal position */
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.85); /* transparent look */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
+  width: 200px;
+  margin-left: 800px;
+  padding-bottom: 100px;
+  height: 50px;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr;
+    margin-right: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home-page h1 {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .navbar {
+    flex-direction: column;
+    top: 70px;
+    right: 10px;
+   
+  }
+
+  .social-icons {
+    top: 20px;
+    right: 10px;
+    font-size: 20px;
+  }
+}
+

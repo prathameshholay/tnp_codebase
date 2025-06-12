@@ -1,0 +1,139 @@
+.home-page {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: url('../assets/placement-bg.webp') no-repeat center center;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Social Icons */
+.social-icons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 15px;
+  font-size: 24px;
+}
+
+.social-icons a {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #95daf3;
+}
+
+/* Heading */
+.home-page h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  color: #f0f0f0;
+  margin: 80px 100px 40px 900px;
+  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.8);
+  text-align: right;
+}
+
+/* Navigation Bar */
+.navbar {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  padding: 0;
+}
+
+.navbar li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar li a:hover {
+  color: #00ffe7;
+}
+
+/* Card Container */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin: 0 100px 0 0;
+}
+
+/* Card Styling */
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  height: 50px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: transform 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+  color: #fff;
+  margin-left: auto;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+  color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-page {
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-page h1 {
+    font-size: 2rem;
+    margin: 40px 20px;
+    text-align: center;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+    margin: 0;
+    justify-items: center;
+  }
+
+  .card {
+    width: 90%;
+    margin-left: 0;
+  }
+
+  .navbar {
+    margin-top: 30px;
+  }
+
+  .social-icons {
+    top: 10px;
+    right: 10px;
+  }
+}

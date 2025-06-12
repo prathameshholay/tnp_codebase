@@ -1,0 +1,226 @@
+/* App.css */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* Base background and color will be set by theme variables */
+  line-height: 1.6; /* Added for better readability */
+}
+
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.home-background {
+  background-image: url("./assets/placement-bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  backdrop-filter: brightness(0.92);
+}
+
+.container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #1e3a8a; /* This could also become a theme variable if needed */
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #e2e8f0; /* Consider theming this if it appears on various backgrounds */
+  padding: 1.2rem 2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: transform 0.2s ease-in-out, background-color 0.2s;
+}
+
+.card:hover {
+  background-color: #cbd5e1; /* Consider theming this */
+  transform: scale(1.05);
+}
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--background-color); /* Use theme variable */
+}
+
+.login-box {
+  background-color: var(--item-bg-color); /* Use theme variable */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: var(--box-shadow); /* Use theme variable */
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  color: var(--primary-color); /* Use theme variable, or a specific heading color variable */
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border: 1px solid var(--input-border-color); /* Use theme variable */
+  background-color: var(--input-bg-color); /* Use theme variable */
+  color: var(--input-text-color); /* Use theme variable */
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.login-form input:focus {
+  border-color: var(--input-focus-border-color);
+  box-shadow: 0 0 0 0.2rem var(--input-focus-box-shadow);
+  outline: none;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: var(--primary-color); /* Use theme variable */
+  color: var(--text-color-inverted); /* Use theme variable */
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+  background-color: var(--primary-color-hover); /* Use theme variable */
+}
+
+.dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh; /* Consider if this should be 100vh or adjust based on navbars */
+}
+
+.dashboard-box {
+  text-align: center;
+  padding: 30px;
+  background-color: var(--item-bg-color); /* Use theme variable */
+  color: var(--text-color); /* Use theme variable */
+  border-radius: 12px;
+  box-shadow: var(--box-shadow); /* Use theme variable */
+}
+
+/* Theme Styles - Central Definitions */
+:root, body.theme-light {
+  --background-color: #f8f9fa; /* Light gray, common for app backgrounds */
+  --text-color: #212529;       /* Dark gray, good for readability */
+  --text-color-light: #6c757d;  /* Lighter gray for secondary text */
+  --text-color-inverted: #ffffff; /* Text on dark/colored backgrounds */
+
+  --primary-color: #007bff;
+  --primary-color-hover: #0056b3;
+  --secondary-color: #6c757d;
+  --secondary-color-hover: #5a6268;
+  --success-color: #28a745;
+  --success-color-hover: #218838;
+  --danger-color: #dc3545;
+  --danger-color-hover: #c82333;
+  --info-color: #17a2b8;
+  --info-color-hover: #138496;
+  --warning-color: #ffc107;
+  --warning-color-hover: #e0a800;
+
+  --container-bg-color: #ffffff; /* White for main content containers */
+  --item-bg-color: #ffffff;       /* White for cards, list items etc. */
+  --border-color: #dee2e6;        /* Standard border color */
+  --border-color-light: #f1f3f5;  /* Lighter border for subtle divisions */
+
+  --input-bg-color: #ffffff;
+  --input-border-color: #ced4da;
+  --input-text-color: #495057;
+  --input-focus-border-color: var(--primary-color);
+  --input-focus-box-shadow: rgba(0, 123, 255, 0.25);
+
+  --link-color: var(--primary-color);
+  --link-hover-color: var(--primary-color-hover);
+
+  --box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+  --box-shadow-light: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+body.theme-dark {
+  --background-color: #22272e;      /* GitHub dark background */
+  --text-color: #c9d1d9;          /* GitHub dark text */
+  --text-color-light: #8b949e;      /* GitHub dark secondary text */
+  --text-color-inverted: #22272e;   /* Text on light/colored backgrounds in dark mode */
+
+  --primary-color: #58a6ff;         /* GitHub dark blue */
+  --primary-color-hover: #388bfd;
+  --secondary-color: #8b949e;
+  --secondary-color-hover: #6e7681;
+  --success-color: #56d364;         /* GitHub dark green */
+  --success-color-hover: #3fb950;
+  --danger-color: #f85149;          /* GitHub dark red */
+  --danger-color-hover: #e93c3c;
+  --info-color: #79c0ff;            /* Lighter blue for info */
+  --info-color-hover: #58a6ff;
+  --warning-color: #eac54f;         /* GitHub dark yellow */
+  --warning-color-hover: #d2b040;
+
+  --container-bg-color: #2d333b;    /* GitHub dark container */
+  --item-bg-color: #373e47;         /* GitHub dark item background */
+  --border-color: #444c56;          /* GitHub dark border */
+  --border-color-light: #373e47;    /* Darker subtle border */
+
+  --input-bg-color: #2d333b;
+  --input-border-color: #444c56;
+  --input-text-color: var(--text-color);
+  --input-focus-border-color: var(--primary-color);
+  --input-focus-box-shadow: rgba(88, 166, 255, 0.25);
+
+  --link-color: var(--primary-color);
+  --link-hover-color: #79c0ff; /* Slightly lighter for hover in dark mode */
+
+  --box-shadow: 0 .5rem 1rem rgba(0,0,0,.35);
+  --box-shadow-light: 0 .125rem .25rem rgba(0,0,0,.175);
+}
+
+/* Apply base theme to body */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Global link styling (optional, can be component-specific) */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
