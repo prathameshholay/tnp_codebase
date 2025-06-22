@@ -51,7 +51,7 @@ const Register = () => {
         <input
           className={styles.input}
           name="name"
-          placeholder="Name"
+          placeholder="👤 Name"
           value={formData.name}
           onChange={handleChange}
           required
@@ -60,7 +60,7 @@ const Register = () => {
           className={styles.input}
           name="email"
           type="email"
-          placeholder="Email"
+          placeholder="✉️ Email"
           value={formData.email}
           onChange={handleChange}
           required
@@ -69,7 +69,7 @@ const Register = () => {
           className={styles.input}
           name="password"
           type="password"
-          placeholder="Password"
+          placeholder="🔒 Password"
           value={formData.password}
           onChange={handleChange}
           required

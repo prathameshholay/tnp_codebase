@@ -1,56 +1,24 @@
-// src/pages/StudentLogin.jsx
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import styles from './StudentLogin.module.css';
+import React from "react";
+import styles from "./StudentLogin.module.css";
+import groupIcon from "../../assets/group-icon.png"; // Ensure correct relative path
 
 const StudentLogin = () => {
-  const [credentials, setCredentials] = useState({ email: '', password: '' });
-  const [error, setError] = useState('');
-  const navigate = useNavigate();
-
-  const handleChange = (e) => {
-    setCredentials({ ...credentials, [e.target.name]: e.target.value });
-  };
-
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    try {
-      await axios.post('http://localhost:5000/api/students/login', credentials, {
-        withCredentials: true,
-      });
-      navigate('/dashboard/student');
-    } catch (err) {
-      setError(err.response?.data?.message || 'Login failed');
-    }
-  };
-
   return (
     <div className={styles.container}>
-      <form onSubmit={handleLogin} className={styles.form}>
+      <div className={styles.formBox}>
+        <img src={groupIcon} alt="Group Icon" className={styles.userImage} />
         <h2 className={styles.title}>Student Login</h2>
-        {error && <p className={styles.error}>{error}</p>}
-        <input
-          name="email"
-          type="email"
-          placeholder="Email"
-          onChange={handleChange}
-          value={credentials.email}
-          required
-          className={styles.input}
-        />
-        <input
-          name="password"
-          type="password"
-          placeholder="Password"
-          onChange={handleChange}
-          value={credentials.password}
-          required
-          className={styles.input}
-        />
-        <button type="submit" className={styles.button}>Login</button>
-      </form>
-      <button onClick={() => navigate('/register/student')} className={styles.registerButton}>No account? Register here</button>
+
+        <input type="email" placeholder="✉️ Email" className={styles.input} />
+        <input type="password" placeholder="🔒 Password" className={styles.input} />
+        <button className={styles.loginBtn}>Login</button>
+      </div>
+
+      <div className={styles.registerWrapper}>
+        <a href="/register" className={styles.registerLink}>
+          No account? Register here
+        </a>
+      </div>
     </div>
   );
 };

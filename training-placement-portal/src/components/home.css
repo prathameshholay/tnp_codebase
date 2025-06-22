@@ -15,19 +15,21 @@
 }
 
 /* Social Icons */
-.social-icons {
-  position: absolute;
-  top: 20px;
+.socialIcons {
+  position: fixed;
+  bottom: 20px;
   right: 20px;
   display: flex;
   gap: 15px;
-  font-size: 24px;
+  z-index: 1000; /* Ensure it's on top if needed */
 }
 
-.social-icons a {
-  color: white;
-  transition: color 0.3s ease;
+.socialIcons .icon {
+  color: white; /* or any color you prefer */
+  font-size: 1.5rem;
+  cursor: pointer;
 }
+
 
 .social-icons a:hover {
   color: #95daf3;

@@ -7,7 +7,7 @@
   align-items: center;
   background: 
     linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
-    url('C:\Users\DELL\Desktop\tnp_codebase\training-placement-portal\src\assets/bg-image.jpg');
+    url('..//src/assets/bg-image.jpg');
   background-size: cover;
   background-position: center;
   padding: 2rem;
@@ -15,14 +15,11 @@
 
 /* Registration box */
 .form {
-  background: rgba(255, 255, 255, 0.1); /* Lower alpha = more transparent */
+  background-color: rgba(255, 255, 255, 0.95);
   padding: 2.5rem 2rem;
-  border-radius: 16px;
-  backdrop-filter: blur(15px); /* glass effect */
-  -webkit-backdrop-filter: blur(15px); /* Safari support */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  width: 70%;
+  border-radius: 12px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
   max-width: 420px;
   display: flex;
   flex-direction: column;
@@ -35,31 +32,28 @@
   font-weight: bold;
   margin-bottom: 1rem;
   text-align: center;
-  color: #e1c9c9;
+  color: #333;
 }
 
 /* Input Fields */
 .input {
-  background: rgba(255, 255, 255, 0.15); /* Transparent white */
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  padding: 12px 15px;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
   border-radius: 8px;
-  color: rgb(0, 0, 0);
   font-size: 1rem;
-  outline: none;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  transition: border-color 0.3s ease;
 }
 
-.input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
+.input:focus {
+  border-color: #4a90e2;
+  outline: none;
 }
 
 /* Button */
 .button {
   padding: 0.8rem 1rem;
-  background-color: #aab2bb;
-  color: rgb(0, 0, 0);
+  background-color: #4a90e2;
+  color: white;
   border: none;
   border-radius: 8px;
   font-weight: bold;
@@ -69,7 +63,7 @@
 }
 
 .button:hover {
-  background-color: #86d7e0;
+  background-color: #357ab8;
 }
 
 /* Error message */
@@ -91,8 +85,8 @@
 .loginRedirect {
   margin-top: 1rem;
   background-color: transparent;
-  border: 2px solid #a0aebe;
-  color: #d3d7dd;
+  border: 2px solid #4a90e2;
+  color: #4a90e2;
   padding: 0.7rem 1rem;
   border-radius: 8px;
   font-size: 0.95rem;
@@ -102,6 +96,6 @@
 }
 
 .loginRedirect:hover {
-  background-color: #c8cfd7;
-  color: rgb(0, 0, 0);
+  background-color: #4a90e2;
+  color: white;
 }
